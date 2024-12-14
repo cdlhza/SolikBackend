@@ -16,6 +16,6 @@ export function createAccessToken(payload){
                 }
                 resolve(token)
             }
-        )//fin del sin
+        )//fin del sin hola
     })//fin de Promise
 }//fin de creatAccessToken
