@@ -40,5 +40,23 @@ app.use("/img/", express.static(path.join(__dirname, "/public/img/")));
 //indcaciones que el servidor utilise el objeto
 app.use("/api/", authRoutes);
 app.use("/api/", productRoutes);
+app.get("/", (req, res) => {
+  res.json({
+    mensaje: "Bienvenido al API REST de productos",
+    version: "1.0.0",
+    rutasDisponibles: [
+      {
+        endpoint: "/api/register",
+        metodo: "POST",
+        descripcion: "Crea un nuevo usuario",
+      },
+      {
+        endpoint: "/api/login",
+        metodo: "POST",
+        descripcion: "Para iniciar sesion",
+      },
+    ],
+  });
+});
 
 export default app;
