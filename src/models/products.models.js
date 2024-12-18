@@ -30,4 +30,4 @@ const productsSchema = new mongoose.Schema(
   }
 ); // fin de productosSchema
 
-export default mongoose.model("Prodcuts", productsSchema);
+export default mongoose.model("Products", productsSchema);
